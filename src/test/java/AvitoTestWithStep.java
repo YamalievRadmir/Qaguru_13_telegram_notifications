@@ -1,5 +1,6 @@
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,6 +12,7 @@ public class AvitoTestWithStep extends TestBase{
 
     String Renault = "Renault Logan";
     @Test
+    @Tag("tests")
     void avitoTestCars() {
         step("Открываем сайт avito.ru", () -> {
             open("https://www.avito.ru");
